@@ -9,15 +9,31 @@
 
   <body>
     
-    <?php
+  <?php
     $userName = "";
     if ( isset( $_POST['radius'] ) ){
       $radius = $_POST['radius'];
     }
+    if ( isset( $_POST['diameter'] ) ){
+      $diameter = $_POST['diameter'];
+    }
+    if ( isset( $_POST['circumfrence'] ) ){
+      $circumfrence = $_POST['circumfrence'];
+    }
+    if ( isset( $_POST['area'] ) ){
+      $area = $_POST['area'];
+    }
+    
+    $Dvalue = readline("Enter diameter:");
+    $diameter = floatval($Dvalue);
+    $radius = $diameter / 2;
+    $circumference = $diameter*pi();
+    $area = pi()*$radius**2;
+
     echo "<h1>For a Circle of Radius ".$radius."</h1>\n";
-    echo "<p>Area = \n";
-    echo "<p>Circumference = \n";
-    ?>
+    echo "<p>Area = ".$area."\n";
+    echo "<p>Circumference = ".$circumference."\n";
+?>
     
   </body>
   
