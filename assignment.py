@@ -1,7 +1,7 @@
 import math
 
 Dvalue = (input("Enter diameter:"))
-if Dvalue.isnumeric():
+if Dvalue.replace(".","").isnumeric():
 
     diameter = float(Dvalue)
     radius = diameter/2
@@ -12,4 +12,3 @@ if Dvalue.isnumeric():
 
     print("Area is "+str("%.2f" %area))
 else: print("Please enter a numeric value")
-
